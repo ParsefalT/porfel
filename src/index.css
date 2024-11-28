@@ -1,0 +1,179 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+	/* My var - Colors*/
+	--black: #16171d;
+	--gray: #afb2bf;
+	--violetDark: #2e2d3d;
+	--primaryHover: #452481;
+	--links: #a97bff;
+	--white: #fafafa;
+	--red: #cc384e;
+	--primary: #6c38cc;
+	--primary-light: #7653fc;
+	--primary-hover: #3f20bd;
+	--blackpure: #000;
+	--black: #171718;
+	--black-border: #26292d;
+	--purple: #5c62ec;
+
+	/* Nav */
+	--nav-bg: var(--black);
+	--nav-border: var(--black-border);
+	--nav-text: var(--white);
+
+	/* Header */
+	--header-bg: var(--black);
+	--header-text: var(--white);
+
+	/* Footer */
+	--footer-bg: var(--black);
+	--footer-text: var(--white);
+
+	/* Light mode */
+	--page-bg: var(--white);
+	--text-color: var(--black);
+	--accent: var(--purple);
+	--title-1: var(--accent);
+
+	--project-card-bg: var(--white);
+	--project-card-text: var(--black);
+	--box-shadow: 0px 5px 35px rgba(0, 0, 0, 0.25);
+	/* --- --- */
+
+	--max-width: 1100px;
+	--border-radius: 12px;
+	--font-mono: ui-monospace, Menlo, Monaco, "Cascadia Mono", "Segoe UI Mono",
+		"Roboto Mono", "Oxygen Mono", "Ubuntu Monospace", "Source Code Pro",
+		"Fira Mono", "Droid Sans Mono", "Courier New", monospace;
+
+	--foreground-rgb: 0, 0, 0;
+	--background-start-rgb: 214, 219, 220;
+	--background-end-rgb: 255, 255, 255;
+
+	--primary-glow: conic-gradient(
+		from 180deg at 50% 50%,
+		#16abff33 0deg,
+		#0885ff33 55deg,
+		#54d6ff33 120deg,
+		#0071ff33 160deg,
+		transparent 360deg
+	);
+	--secondary-glow: radial-gradient(
+		rgba(255, 255, 255, 1),
+		rgba(255, 255, 255, 0)
+	);
+
+	--tile-start-rgb: 239, 245, 249;
+	--tile-end-rgb: 228, 232, 233;
+	--tile-border: conic-gradient(
+		#00000080,
+		#00000040,
+		#00000030,
+		#00000020,
+		#00000010,
+		#00000010,
+		#00000080
+	);
+
+	--callout-rgb: 238, 240, 241;
+	--callout-border-rgb: 172, 175, 176;
+	--card-rgb: 180, 185, 188;
+	--card-border-rgb: 131, 134, 135;
+}
+
+@media (prefers-color-scheme: dark) {
+	:root {
+		--foreground-rgb: 255, 255, 255;
+		--background-start-rgb: 0, 0, 0;
+		--background-end-rgb: 0, 0, 0;
+
+		--primary-glow: radial-gradient(
+			rgba(1, 65, 255, 0.4),
+			rgba(1, 65, 255, 0)
+		);
+		--secondary-glow: linear-gradient(
+			to bottom right,
+			rgba(1, 65, 255, 0),
+			rgba(1, 65, 255, 0),
+			rgba(1, 65, 255, 0.3)
+		);
+
+		--tile-start-rgb: 2, 13, 46;
+		--tile-end-rgb: 2, 5, 19;
+		--tile-border: conic-gradient(
+			#ffffff80,
+			#ffffff40,
+			#ffffff30,
+			#ffffff20,
+			#ffffff10,
+			#ffffff10,
+			#ffffff80
+		);
+
+		--callout-rgb: 20, 20, 20;
+		--callout-border-rgb: 108, 108, 108;
+		--card-rgb: 100, 100, 100;
+		--card-border-rgb: 200, 200, 200;
+	}
+}
+
+* {
+	box-sizing: border-box;
+	padding: 0;
+	margin: 0;
+}
+
+#root {
+	height: 100dvh;
+	display: flex;
+	flex-direction: column;
+}
+
+body {
+	font-family: "Agbalumo", system-ui;
+	font-weight: 400;
+	font-style: normal;
+	color: white;
+	background-color: var(--black);
+	transition: all 0.2s;
+}
+
+body > .spiener {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+
+.light {
+	background-color: var(--white) !important;
+	color: black !important;
+}
+
+/* Main cursorStyles */
+.cursor-ball {
+	width: 2rem;
+	height: 2rem;
+	border: 1px solid var(--primary-light);
+	transition: all 0.1s linear;
+	position: absolute;
+	left: -100%;
+}
+
+.cursor-ball {
+	border-radius: 50%;
+	position: absolute;
+	z-index: 100;
+	pointer-events: none;
+	transform: translate(-50%, -50%);
+}
+
+.cursor-mousedown {
+	width: 1rem;
+	height: 1rem;
+	border: 2px solid #000;
+	background-color: #8454f4;
+}

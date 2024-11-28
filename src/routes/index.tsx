@@ -26,7 +26,7 @@ function RouteComponent() {
 				{/* <Link download={'public'}/> */}
 			</section>
 
-			<section className="flex items-center justify-center flex-col mt-10">
+			<section className="flex items-center justify-center flex-col mt-5">
 				<h2 className="text-2xl">Frontend</h2>
 				<div className="mt-4 text-violet-300 text-xl w-[400px]">
 					HTML, CSS, SCSS/SASS, BootStrap, JavaScript, TypeScript,

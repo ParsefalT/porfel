@@ -4,16 +4,17 @@ import Cursor from "./Cursor";
 interface Links {
 	text: string;
 	link: string;
+	id: number;
 }
 
 const links: Links[] = [
-	{ text: "Home", link: "/" },
-	{ text: "Projects", link: "/projects" },
-	{ text: "Contacts", link: "/contacts" },
+	{ text: "Home", link: "/", id: 1 },
+	{ text: "About", link: "/about", id: 2 },
+	{ text: "Contacts", link: "/contacts", id: 3 },
 ];
 
 const items = links.map((item) => (
-	<li>
+	<li key={item.id}>
 		<Link
 			className="hover:text-violet-400 hover:scale-110 transition inline-block"
 			activeProps={{

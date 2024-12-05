@@ -15,7 +15,7 @@ function RouteComponent() {
 				<div className="flex flex-col gap-14">
 					<h1 className="text-5xl">
 						<strong>
-							Hi, my name is <em>Sergei</em>
+							Hi, my name is <em className="text-violet-400 drop-shadow-[3px_3px_4px_purple]">Sergei</em>
 						</strong>
 						<br />a Web developer
 					</h1>
@@ -30,7 +30,7 @@ function RouteComponent() {
 				<h2 className="text-2xl">Frontend</h2>
 				<div className="mt-4 text-violet-300 text-xl w-[400px]">
 					HTML, CSS, SCSS/SASS, BootStrap, JavaScript, TypeScript,
-					ReactJS, Redux, NPM, MaterialUI, TailwindCSS,
+					React, Redux, NPM, MaterialUI, TailwindCSS, Ant Design,
 					StyledComponents, StyleX
 				</div>
 

@@ -1,7 +1,9 @@
 import { useEffect } from "react";
 export default function Cursor(): JSX.Element {
 	useEffect(() => {
-		const cursorBall = document.querySelector(".cursor-ball") as HTMLDivElement;
+		const cursorBall = document.querySelector(
+			".cursor-ball"
+		) as HTMLDivElement;
 		document.addEventListener("mousemove", (e) => {
 			cursorBall.style.top = e.pageY + "px";
 			cursorBall.style.left = e.pageX + "px";
